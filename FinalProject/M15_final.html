@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+    <style>
+    table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    }
+
+    td, th {
+    border: 1px solid #100c0c;
+    text-align: left;
+    padding: 8px;
+    background-color: #d4dcb5;
+    }
+    
+    .complete {
+        text-decoration: line-through;
+    }
+
+    .imptask {
+    color: #ffffff;
+    background-color: #eb0a0a ;
+
+    }
+    .highpri {
+    background-color: #f1b204;
+    color: black;
+    }
+    .medpri {
+    background-color: #d8fc0c;
+    color: black;
+    }
+    .lowpri {
+    background-color: #37e560;
+    color: black;
+    }
+</style>
+    <script src="m15_final.js" defer></script>
+</head>
+<body>
+<form id="taskform">
+    <input type="text" id="tasknm" name="tasknm" placeholder="Task Name">
+    <select id="priority" name="priority">
+        <option value="none">Select Priority</option>
+        <option value="High">High priority</option>
+        <option value="Medium">Medium priority</option>
+        <option value="Low">Low priority</option>
+    </select>
+    <input type="checkbox" id="importance" name="importance" value=false>
+    <label for="important">Important</label>
+    <input type="submit" id="addtask" value="Add task">
+</form>
+
+<div id="taskmanager">
+    <table id="tasktable">
+        <tr>
+            <th>Task</th> <th>Priority</th> <th>Date</th> <th>Done</th>
+        </tr>
+        <tr class="complete">
+            <td class="imptask">Walk Doggy</td> <td>High priority</td> <td>4/27/2026</td> <td><input type="checkbox" id=done name=done></td>
+        </tr>
+    </table>
+</div>
+</body>
